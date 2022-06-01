@@ -21,3 +21,19 @@ In order to open the .appx, you'll need to install an untrusted certificate. You
 2. Open Properties > Digital Signatures > Details > View Certificate > Install Certificate
 3. Some Windows security popup shows > accept
 4. Choose Local Machine > then automatically select..  option or place all certificates in Trusted People
+
+
+### Using a local Electron build
+
+If you'd like to use a local Electron build, change the path in forge.config.js to point at the folder containing your local Electron binary:
+```
+// example path
+  plugins: [
+    ['@electron-forge/plugin-local-electron', {
+      // Enter the path to your local electron binary here
+      electronPath: 'C:/Users/me/dev/electron/src/out/Testing',
+      enabled: true
+    }]
+  ],
+```
+To use a released version of Electron, comment out of remove the `@electron-forge/plugin-local-electron` plugin from the forge config.

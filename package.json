@@ -15,20 +15,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "19.0.0",
+    "electron": "19.0.2",
+    "@electron-forge/plugin-local-electron": "6.0.0-beta.63",
     "@electron-forge/cli": "^6.0.0-beta.59",
     "@electron-forge/maker-appx": "^6.0.0-beta.59"
   },
   "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-appx",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   },
   "license": "MIT"
 }
